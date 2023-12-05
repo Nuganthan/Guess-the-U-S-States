@@ -11,8 +11,7 @@ data = pandas.read_csv("50_states.csv")
 all_states = data.state.to_list()
 guessed_states = []
 
-is_game_on = True
-while is_game_on:
+while len(guessed_states) < 50:
     guess = screen.textinput(title=f"{len(guessed_states)}/50 states correct", prompt="What are the states in U S").title()
 
     if guess in all_states:
